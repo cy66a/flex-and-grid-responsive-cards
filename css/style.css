@@ -1,0 +1,121 @@
+@charset "UTF-8";
+:root {
+  --dark-coral: #7b3b3b;
+  --purple: #80007f;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #252526;
+  min-height: 100vh;
+  font-size: clamp(0.875rem, 0.466rem + 2.045vw, 2rem);
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+.controls {
+  padding-top: 40px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 30px;
+  transition: max-width 5s;
+}
+
+.inner {
+  outline: 1px solid #fff;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100px;
+}
+
+.flex {
+  padding-top: 40px;
+}
+.flex__inner {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.flex__card {
+  flex-basis: 300px;
+  flex-grow: 1;
+  background-color: var(--dark-coral);
+}
+
+.grid {
+  padding: 40px 0;
+}
+.grid__inner {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.grid__card {
+  background-color: var(--purple);
+}
+
+/* Стили для общего вида переключателя */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Скрываем стандартный чекбокс */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Стили для слайдера */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Перемещаем слайдер при активации чекбокса */
+input:checked + .slider {
+  background-color: rgb(129, 129, 129);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Дополнительный стиль для эффекта наведения */
+.slider:hover {
+  background-color: darkgray;
+}/*# sourceMappingURL=style.css.map */

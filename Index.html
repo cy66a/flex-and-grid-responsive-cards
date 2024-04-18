@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Адаптивные карточки на Flex и Grid без медазапросов</title>
+</head>
+
+<body>
+    <main class="main">
+
+        <div class="controls">
+            <div>
+                Изменить ширину контейнера:
+                <label class="switch">
+                    <input type="checkbox" id="resizeContainer">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <br>
+            
+            <div>
+                Отображать ширину карточек:
+                <label class="switch">
+                    <input type="checkbox" id="toggleWidth" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="flex">
+            <div class="container">
+                <h2>Flex-элементы</h2>
+                <div class="flex__inner inner">
+                    <div class="flex__card card"></div>
+                    <div class="flex__card card"></div>
+                    <div class="flex__card card"></div>
+                    <div class="flex__card card"></div>
+                    <div class="flex__card card"></div>
+                    <div class="flex__card card"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="container">
+                <h2>Grid-элементы</h2>
+                <div class="grid__inner inner">
+                    <div class="grid__card card"></div>
+                    <div class="grid__card card"></div>
+                    <div class="grid__card card"></div>
+                    <div class="grid__card card"></div>
+                    <div class="grid__card card"></div>
+                    <div class="grid__card card"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+<script src="show-card-width.js"></script>
+<script src="container-width-toggle.js"></script>
+
+</html>
